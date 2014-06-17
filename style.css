@@ -4,12 +4,27 @@
     box-sizing: border-box;
 }
 
-.video {
-	width: 854px;
-	height: 480.375px;
+.wrap {
+	width: 1080px;
+
 }
 
-.footer {
+
+.video {
+	width: 800px;
+	height: 450px;
+	float: left;
+}
+
+
+
+footer {
 	position: absolute;
 	bottom: 10px;
+	height: 100px;
+
+}
+
+.logo {
+	text-align: right;
 }
