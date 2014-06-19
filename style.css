@@ -11,31 +11,44 @@ body, html {
     min-width: 510px;
 }
 
+/* ENTIRE PAGE CONTAINER */
+
 #container {
-    background: #f00; /* styling only */
     position: relative;
     height: auto !important;
     min-height: 100%;
     height: 100%;
 }
 
+/* VIDEO POST CONTAINER */
+
 #content {
     overflow: hidden;
-    padding: 30px 30px 80px 30px;
-    outline: 1px dashed #000;
+    padding: 30px 0 80px 30px;
 
 }
 
+#flex {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+/* VIDEO CONTAINER */
+
+.vidpost {
+    max-width: 858px;
+    min-width: 400px;
+    outline: 1px dashed #000;
+    flex:2;
+    margin-right: 30px;
+}
+
 .video {
-/*    float: left;
-*/    margin: 0 30px 20px 0;
-    
     position: relative;
-    padding-bottom: 56.25%; 
+    padding-bottom: 56.25%;
     padding-top: 25px;
     height: 0;
-
-
 }
 
 .video iframe {
@@ -46,6 +59,24 @@ body, html {
     height: 100%;
 }
 
+/* POST TEXT INFO BOX */
+
+.postinfo {
+    display: inline-block;
+    outline: 1px dashed #000;
+    flex: 1;
+    min-width: 200px;
+    margin-right: 30px;
+}
+
+/* Directional buttons */
+
+.button {
+	margin: 10px;
+	text-align: center;
+}
+
+/* FOOTER ABS INSIDE CONTENT WITH 80PX BOTTOM PADDING, and CONTAINER PARENT RELATIVE POSITION*/
 
 #footer {
     position: absolute;
@@ -56,16 +87,9 @@ body, html {
     background: #0f0;
 }
 
-.logo {
+.footinfo {
     text-align: right;
+    margin-top: 20px;
     margin-right: 30px;
 }
 
-
-/* woo */
-
-@media only screen and (max-width: 600px) {
-    #footer {background: red;}
-    iframe { width: 448px; height: 252px}
-
-}
