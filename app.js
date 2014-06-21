@@ -36,22 +36,29 @@ var i = 0;
 var lastPost = function() {
     $('.arrow-left').click(function(e) {
         e.preventDefault();
+        if (i <= 0) {
+			i = allPosts.length - 1;
+		} else {
+			i--;
+		}
+    
         $('.text').html(allPosts[i].info);
         $('iframe').attr('src', allPosts[i].video);
         $('#tumblr a').attr('href', allPosts[i].tumblr);
         $('#soundcloud a').attr('href', allPosts[i].soundcloud);
-        i = (i + 1) % allPosts.length;
+        // i = (i + 1) % allPosts.length;
     });
 };
 
 var nextPost = function() {
 	$('.right').click(function(e) {
+
 		e.preventDefault();
+		i = (i + 1) % allPosts.length;
 		console.log('hii');
         $('.text').html(allPosts[i].info);
         $('iframe').attr('src', allPosts[i].video);
         $('#tumblr a').attr('href', allPosts[i].tumblr);
         $('#soundcloud a').attr('href', allPosts[i].soundcloud);
-        i = (i + 1) % allPosts.length;
-    });
+            });
 };
